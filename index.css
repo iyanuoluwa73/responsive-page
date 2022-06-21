@@ -1,13 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
 }
 
 body {
     width: 100%;
+    font-size: 16px;
 }
 
 main {
-    display: flex;
+    color: white;
+    display: block;
+    background: url(images/bg-intro-mobile.png) repeat-y var(--red);
+    padding: 5.8em 1em;
+}
+
+.con1 {
+    text-align: center;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.con1 p {
+    color: white;
+    padding: 1.2em 0 3em 0;
+}
+
+.sign .msg {
+    margin: 0 auto;
+    text-align: center;
+    width: 95%;
+    padding: 20px 15px;
+    border-radius: 10px;
+    background-color: var(--blue);
+    box-shadow: 0 5px rgb(219,102,102);
+}
+
+.sign .msg p {
+    width: 70%;
+    font-size: 1em;
+    font-weight: 500;
+    margin: 0 auto;
+}
+
+.msg p span {
+    font-weight: 700;
+    font-size: 1.1em;
+}
+
+.sign .card {
+    margin: 1em auto 2em auto;
+    background-color: white;
+    border-radius: 10px;
+    width: 95%;
+    padding: 2em 1.2em;
+    box-shadow: 0 7px rgb(219,102,102);
+}
+
+input[type='text'], 
+input[type='email'],
+input[type='password'] {
+    width: 100%;
+    padding: 1.2em;
+    margin: 0 0 1em 0;
+    font-weight: 600;
+    border-radius: 3px;
+    border: 1px solid var(--grayish-blue);
+}
+
+button {
+    width: 100%;
+    padding: 20px 15px;
+    border-radius: 5px;
+    background-color: var(--green);
+    color: white;
+    border: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    box-shadow: 0 5px rgb(49,185,127);
+}
+
+button:hover {
+    cursor: pointer;
+    filter: blur(1px);
+}
+
+.card p {
+    color: var(--grayish-blue);
+    padding-top: 1em;
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+}
+
+.card p span {
+    color: var(--red);
+    font-weight: 700;
+}
+
+@media screen and (min-width: 1440px) {
+    
+    main {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        background: url(images/bg-intro-desktop.png) repeat-y var(--red);
+        padding: 5.5em 9em 2em 5.5em;
+    }
+
+    .con1 {
+        width: 45%;
+    }
+
+    .sign {
+        width: 50%;
+    }
+
+    .con1 h1 {
+        width: 80%;
+        text-align: left;
+        font-size: 3em;
+    }
+
+    .con1 p {
+        width: 100%;
+        text-align: left;
+    }
+
+    .sign .card {
+        padding: 3em 2em 1em 2em;
+    }
+
+    input[type='text'], 
+    input[type='email'],
+    input[type='password'] {
+        font-size: 1.1em;
+    }
+
+    button {
+        text-align: center;
+    }
+
+    .sign .msg {
+        padding: 15px 10px;
+    }
+    
+    .sign .msg p {
+        width: 80%;
+        font-size: 1em;
+        font-weight: 500;
+        margin: 0 auto;
+    }
 }
